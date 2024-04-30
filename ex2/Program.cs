@@ -10,12 +10,21 @@ namespace ex2
     {
         static void Main(string[] args)
         {
-            string[] nome = new string[3];
+            Console.WriteLine("Digite o número de nomes:");
+            int n = int.Parse(Console.ReadLine());
+            string[] nome = new string[n];
 
-            Console.WriteLine("");
-            nome[1] = Console.ReadLine();
+            for (int i = 0; i <= n; i++) { 
+            Console.WriteLine("Digite o nome "+i+": ");
+            nome[i] = Console.ReadLine();
+            }
 
+            for ( int i = 0; i <= n; i++)
+            {
+                Console.WriteLine("Nome " + i + ": " + nome[i]);
+            }
 
+            Console.ReadKey();
         }
     }
 }
